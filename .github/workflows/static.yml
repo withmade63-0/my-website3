@@ -1,43 +1,114 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنظيم الوقت في التعليم الإلكتروني</title>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="style.css">
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+        body {
+            background: linear-gradient(180deg, #f8fafc, #eef2ff);
+            color: #1e293b;
+            line-height: 1.9;
+            direction: rtl;
+        }
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        /* رأس الصفحة */
+        .page-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(90deg, #0f172a, #1e3a8a);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .page-header img {
+            width: 100px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            background: white;
+            padding: 6px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .page-header h1 {
+            font-size: 30px;
+            color: #e0f2fe;
+        }
+
+        /* المحتوى */
+        .content {
+            max-width: 950px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .content p {
+            margin-bottom: 22px;
+            font-size: 18px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content {
+                padding: 25px;
+                margin: 30px 15px;
+            }
+
+            .page-header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <img src="/assets/img/WhatsApp Image 2026-01-02 at 12.54.08.jpeg" width="100" alt="">
+
+
+    <!-- رأس الصفحة -->
+    <header class="page-header">
+        <img src="assets/img/WhatsApp Image 2026-01-02 at 12.54.08.jpeg" alt="Logo">
+        <h1>تنظيم الوقت في التعليم الإلكتروني</h1>
+    </header>
+
+    <!-- المحتوى -->
+    <main class="content">
+        <p>
+            لم يعد تنظيم الوقت مهارة اختيارية في عصر التعليم الرقمي، بل أصبح ضرورة أكاديمية ومهنية،
+            خاصة في التخصصات التقنية.
+            فالتعلم الإلكتروني يمنح الطالب حرية كبيرة، إلا أن هذه الحرية تتطلب وعيًا ذاتيًا عاليًا
+            وقدرة على اتخاذ قرارات صحيحة تتعلق بإدارة الوقت.
+        </p>
+
+        <p>
+            في تخصص علوم الحاسوب، يرتبط تنظيم الوقت بشكل مباشر بتطوير المهارات العملية مثل البرمجة،
+            التفكير الخوارزمي، وحل المشكلات.
+            كما أن الالتزام بخطة زمنية واضحة يساعد الطالب على مواكبة التطور السريع في هذا المجال
+            دون الشعور بالإرهاق أو فقدان الدافعية.
+        </p>
+
+        <p>
+            إن الاستثمار في تحسين مهارات تنظيم الوقت لا ينعكس فقط على النجاح الجامعي،
+            بل يُعد خطوة أساسية لبناء مسار مهني ناجح في مجالات تقنية المعلومات والبرمجيات.
+        </p>
+    </main>
+
+</body>
+
+</html>
